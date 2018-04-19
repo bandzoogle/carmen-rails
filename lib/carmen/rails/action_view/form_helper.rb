@@ -206,7 +206,6 @@ module ActionView
 
             if (Rails::VERSION::MAJOR == 4 && !select_not_required?(html_options)) ||
                 (Rails::VERSION::MAJOR == 5 && placeholder_required?(html_options))
-              raise ArgumentError, "include_blank cannot be false for a required field." if options[:include_blank] == false
               options[:include_blank] ||= true unless options[:prompt]
             end
 
